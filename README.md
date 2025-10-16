@@ -1,6 +1,7 @@
 # Kafka Backend — Example
 
-A simple Java + Kafka (Maven) example to demonstrate producing and consuming trade events. Intended for local development and experimentation (single-node KRaft Kafka).
+- A simple Java + Kafka (Maven) example to demonstrate producing and consuming trade events. 
+- Intended for local development and experimentation (single-node KRaft Kafka).
 
 ## Recommended versions
 - Java: **JDK 25** (OpenJDK build of your choice). See Oracle/Adoptium downloads for the latest builds.
@@ -11,7 +12,18 @@ A simple Java + Kafka (Maven) example to demonstrate producing and consuming tra
 (Verified at time of writing: Kafka 4.0.1 released Oct 13, 2025; JDK 25 available Sep 2025). :contentReference[oaicite:7]{index=7}
 
 ## Project layout
-<see folder tree in repository>
+
+KafkaSample/
+├── docker/
+│ └── docker-compose.yml
+├── src/
+│ └── main/
+│ ├── java/
+│ └── resources/
+├── pom.xml
+└── README.md
+ 
+- see folder tree in repository for latest 
 
 ## Build (local)
 1. Install Java 25 and Maven.
