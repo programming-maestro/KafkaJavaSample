@@ -12,18 +12,7 @@
 (Verified at time of writing: Kafka 4.0.1 released Oct 13, 2025; JDK 25 available Sep 2025). :contentReference[oaicite:7]{index=7}
 
 ## Project layout
-
-KafkaSample/
-├── docker/
-│ └── docker-compose.yml
-├── src/
-│ └── main/
-│ ├── java/
-│ └── resources/
-├── pom.xml
-└── README.md
- 
-- see folder tree in repository for latest 
+- see folder tree in repository for the latest layout. 
 
 ## Build (local)
 1. Install Java 25 and Maven.
