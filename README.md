@@ -1,4 +1,4 @@
-# Kafka Trading Backend — Example
+# Kafka Backend — Example
 
 A simple Java + Kafka (Maven) example to demonstrate producing and consuming trade events. Intended for local development and experimentation (single-node KRaft Kafka).
 
