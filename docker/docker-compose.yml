@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  kafka:
+    image: apache/kafka:4.0.1
+    container_name: kafka
+    hostname: kafka
+    ports:
+      - "9092:9092"   # client port
+      - "9093:9093"   # controller port
+    environment:
+      # KRaft (controller + broker) single-node
+      KAFKA_PROCESS_ROLES: "broker,controller"
+      KAFKA_NODE_ID: "1"
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@localhost:9093"
+      KAFKA_LISTENERS: "PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093"
+      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://localhost:9092"
+      KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      # persistent directory inside container (map to host)
+      KAFKA_LOG_DIRS: "/kafka-logs"
+    volumes:
+      - ./kafka-data:/kafka-logs
+    # delay start of broker until it has been formatted (you might run init step separately)
